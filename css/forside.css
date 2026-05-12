@@ -1,0 +1,271 @@
+/* Forside: plakat, artistutvalg og praktisk informasjon i Bergenfest-stil */
+.media-hero {
+  background: var(--color-teal);
+}
+
+.media-hero__image {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  object-fit: contain;
+}
+
+.intro-band {
+  background: var(--color-teal);
+  color: #ffffff;
+}
+
+.intro-band__inner {
+  width: min(100% - 2rem, var(--content-width));
+  margin: 0 auto;
+  padding: var(--space-2xl) 0;
+  display: grid;
+  gap: var(--space-xl);
+}
+
+.intro-band__title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3.25rem);
+  line-height: 1.05;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-wrap: balance;
+}
+
+.intro-band__lead {
+  margin: 0;
+  max-width: 40rem;
+  font-size: 1.125rem;
+  color: #f4f1f8;
+}
+
+.intro-band__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+}
+
+.featured-artists {
+  padding-top: var(--space-2xl);
+  padding-bottom: var(--space-2xl);
+}
+
+.featured-artists__grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: var(--space-lg);
+}
+
+.artist-teaser {
+  margin: 0;
+}
+
+.artist-teaser__card {
+  position: relative;
+  overflow: hidden;
+  min-height: 100%;
+  background: var(--color-dark);
+  border: 3px solid var(--frame-color, var(--color-pink));
+  box-shadow: var(--shadow-card);
+}
+
+.artist-teaser__card--red {
+  --frame-color: #f05a89;
+}
+
+.artist-teaser__card--purple {
+  --frame-color: #5a4977;
+}
+
+.artist-teaser__card--green {
+  --frame-color: #009e90;
+}
+
+.artist-teaser__card--orange {
+  --frame-color: #f68c59;
+}
+
+.artist-teaser__image {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+.artist-teaser__name {
+  position: absolute;
+  inset-inline: 0;
+  bottom: 0;
+  margin: 0;
+  padding: 1rem;
+  font-size: clamp(1.125rem, 2.5vw, 1.75rem);
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  line-height: 1.15;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-shadow: 0 0.15rem 0.35rem rgba(0, 0, 0, 0.45);
+  pointer-events: none;
+}
+
+.artist-teaser__link {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.artist-teaser__link:focus-visible {
+  outline: none;
+  box-shadow: inset 0 0 0 4px #ffffff, inset 0 0 0 7px var(--color-focus);
+}
+
+.card-grid,
+.practical-grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.card-grid {
+  display: grid;
+  gap: var(--space-lg);
+}
+
+.info-card,
+.practical-card {
+  position: relative;
+  overflow: hidden;
+  background: var(--color-surface);
+  border: 2px solid rgba(56, 31, 83, 0.1);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-card);
+  transition: box-shadow var(--transition-fast), border-color var(--transition-fast);
+}
+
+.info-card:hover,
+.practical-card:hover {
+  border-color: rgba(56, 31, 83, 0.22);
+  box-shadow: var(--shadow-card-hover);
+}
+
+.info-card,
+.practical-card {
+  padding: var(--space-lg);
+  height: 100%;
+}
+
+.info-card::before,
+.practical-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 0.35rem;
+}
+
+.info-card--program::before {
+  background: linear-gradient(90deg, var(--color-teal), #5ec2c7);
+}
+
+.info-card--practical::before {
+  background: var(--gradient-cta);
+}
+
+.info-card--access::before {
+  background: linear-gradient(90deg, var(--color-purple), var(--color-purple-rich));
+}
+
+.info-card__tag {
+  margin: 0 0 var(--space-sm);
+  font-size: 0.8125rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-teal);
+}
+
+.info-card__title,
+.practical-card__title {
+  margin: 0 0 var(--space-sm);
+  font-size: 1.25rem;
+  color: var(--color-purple-soft);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.info-card__text {
+  margin: 0 0 var(--space-lg);
+  color: var(--color-muted);
+}
+
+.info-card__link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
+  padding: 0.5rem 0;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-bottom: 3px solid var(--color-teal);
+}
+
+.info-card__link:hover,
+.info-card__link:focus-visible {
+  color: var(--color-dark);
+  border-bottom-color: var(--color-dark);
+}
+
+.page-section--muted {
+  position: relative;
+  background: var(--color-bg-soft);
+  width: 100%;
+  padding-inline: max(1rem, calc((100% - var(--content-width)) / 2));
+}
+
+.page-section--muted > * {
+  position: relative;
+  z-index: 1;
+}
+
+.practical-grid {
+  display: grid;
+  gap: var(--space-lg);
+}
+
+.practical-card::before {
+  background: var(--gradient-cta);
+}
+
+.practical-card p {
+  margin: 0;
+  color: var(--color-muted);
+}
+
+@media (min-width: 40rem) {
+  .featured-artists__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 48rem) {
+  .intro-band__inner {
+    grid-template-columns: minmax(0, 1.2fr) auto;
+    align-items: end;
+  }
+
+  .card-grid,
+  .practical-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 64rem) {
+  .featured-artists__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}

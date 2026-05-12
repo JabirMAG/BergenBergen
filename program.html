@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="Favicon/BergenFavicon.ico" sizes="any">
+  <meta name="description" content="Bergenfest 2026 – program fordelt på onsdag til lørdag. Søk og filtrer på dag.">
+  <title>Bergenfest 2026 – Program</title>
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/program.css">
+</head>
+<body>
+  <a class="skip-link" href="#hovedinnhold">Hopp til hovedinnhold</a>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="site-logo" href="index.html" aria-label="Bergenfest 2026 – gå til forsiden">
+        <img class="site-logo__image" src="Bergenfest - Bergenfest_files/date-purple-with-green.png" alt="" width="168" height="72">
+      </a>
+
+      <div class="site-header__tools">
+        <a class="site-cta" href="billetter.html">Kjøp billetter</a>
+        <button
+          type="button"
+          class="menu-toggle"
+          aria-expanded="false"
+          aria-controls="hovedmeny"
+          aria-label="Åpne eller lukk navigasjonsmeny"
+        >
+          <span class="menu-toggle__bar" aria-hidden="true"></span>
+          <span class="menu-toggle__bar" aria-hidden="true"></span>
+          <span class="menu-toggle__bar" aria-hidden="true"></span>
+          <span class="menu-toggle__label">Meny</span>
+        </button>
+      </div>
+
+      <nav id="hovedmeny" class="site-nav" aria-label="Hovedmeny">
+        <ul class="site-nav__list">
+          <li><a href="index.html" class="site-nav__link">Forside</a></li>
+          <li><a href="program.html" class="site-nav__link" aria-current="page">Program</a></li>
+          <li><a href="tilgjengelighet.html" class="site-nav__link">Tilgjengelighet</a></li>
+          <li>
+            <a href="billetter.html" class="site-nav__link site-nav__link--cta">
+              Kjøp billetter
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="hovedinnhold" class="site-main" tabindex="-1">
+    <div class="page-intro page-intro--program" aria-hidden="true"></div>
+    <div class="page-section">
+      <header class="page-header page-header--centered">
+        <p class="page-header__kicker">Lineup 2026</p>
+        <h1 id="program-tittel" class="page-header__title">Program</h1>
+        <p class="page-header__lead">
+          Oversikt per dag med lenker til hver artist. Bruk søk og dagfilter for å finne artister. Tekst og bilder på
+          artistsidene er hentet fra bergenfest.no.
+        </p>
+      </header>
+
+      <div class="program-controls" role="search" aria-label="Filtrer program">
+        <label class="search-field" for="artist-sok">
+          <span class="search-field__label">Søk etter artist</span>
+          <input
+            id="artist-sok"
+            class="search-field__input"
+            type="search"
+            name="artist-sok"
+            placeholder="Skriv artistnavn"
+            autocomplete="off"
+            enterkeyhint="search"
+          >
+        </label>
+
+        <fieldset class="day-filters">
+          <legend class="day-filters__legend">Filtrer på dag</legend>
+          <div class="day-filters__buttons">
+            <button type="button" class="filter-button filter-button--active" data-day-filter="alle" aria-pressed="true">
+              Alle
+            </button>
+            <button type="button" class="filter-button" data-day-filter="onsdag" aria-pressed="false">
+              Onsdag
+            </button>
+            <button type="button" class="filter-button" data-day-filter="torsdag" aria-pressed="false">
+              Torsdag
+            </button>
+            <button type="button" class="filter-button" data-day-filter="fredag" aria-pressed="false">
+              Fredag
+            </button>
+            <button type="button" class="filter-button" data-day-filter="lordag" aria-pressed="false">
+              Lørdag
+            </button>
+          </div>
+        </fieldset>
+      </div>
+
+      <p id="program-status" class="program-status" role="status" aria-live="polite"></p>
+
+      <div id="program-innhold" class="program-schedule" aria-describedby="program-tittel program-status">
+        <section class="program-day program-day--onsdag" data-day="onsdag" aria-labelledby="program-dag-onsdag">
+          <h2 id="program-dag-onsdag" class="program-day__title">Onsdag 10. juni 2026</h2>
+          <ul class="program-day__list">
+            <li class="program-day__item"><a class="program-day__link" href="artist.html?slug=lewis-capaldi-1">Lewis Capaldi</a></li>
+            <li class="program-day__item"><a class="program-day__link" href="artist.html?slug=synne-vo">Synne Vo</a></li>
+            <li class="program-day__item"><a class="program-day__link" href="artist.html?slug=tobias-sten">Tobias Sten</a></li>
+            <li class="program-day__item"><a class="program-day__link" href="artist.html?slug=brooke-combe-1">Brooke Combe</a></li>
+            <li class="program-day__item"><a class="program-day__link" href="artist.html?slug=don-west">DON WEST</a></li>
+            <li class="program-day__item"><a class="program-day__link" href="artist.html?slug=esther">Esther</a></li>
+            <li class="program-day__item"><a class="program-day__link" href="artist.html?slug=lemi">Lemi</a></li>
+            <li class="program-day__item"><a class="program-day__link" href="artist.html?slug=lottery-winners">Lottery Winners</a></li>
+            <li class="program-day__item"><a class="program-day__link" href="artist.html?slug=odhran-murphy">Odhran Murphy</a></li>
+            <li class="program-day__item"><a class="program-day__link" href="artist.html?slug=sarah-julia">Sarah Julia</a></li>
+            <li class="program-day__item"><a class="program-day__link" href="artist.html?slug=the-sophs">The Sophs</a></li>
+          </ul>
+        </section>
+        <section class="program-day program-day--torsdag" data-day="torsdag" aria-labelledby="program-dag-torsdag">
+          <h2 id="program-dag-torsdag" class="program-day__title">Torsdag 11. juni 2026</h2>
+          <ul class="program-day__list">
+            <li class="program-day__item"><a class="program-day__link" href="artist.html?slug=the-hives">The Hives</a></li>
+            <li class="program-day__item"><a class="program-day__link" href="artist.html?slug=the-kooks">The Kooks</a></li>
+            <li class="program-day__item"><a class="program-day__link" href="artist.html?slug=veronica-maggio-1">Veronica Maggio</a></li>
+            <li class="program-day__item"><a class="program-day__link" href="artist.html?slug=alt-blk-era">ALT BLK ERA</a></li>
+            <li class="program-day__item"><a class="program-day__link" href="artist.html?slug=bob-vylan">Bob Vylan</a></li>
+            <li class="program-day__item"><a class="program-day__link" href="artist.html?slug=kristi-brud-1">Kristi Brud</a></li>
+            <li class="program-day__item"><a class="program-day__link" href="artist.html?slug=nektar">Nektar</a></li>
+            <li class="program-day__item"><a class="program-day__link" href="artist.html?slug=nora-brown-with-stephanie-coleman">Nora Brown with Stephanie Coleman</a></li>
+            <li class="program-day__item"><a class="program-day__link" href="artist.html?slug=nothing-but-thieves-1">Nothing But Thieves</a></li>
+            <li class="program-day__item"><a class="program-day__link" href="artist.html?slug=the-reytons-1">The Reytons</a></li>
+            <li class="program-day__item"><a class="program-day__link" href="artist.html?slug=tropical-fuck-storm">Tropical Fuck Storm</a></li>
+            <li class="program-day__item"><a class="program-day__link" href="artist.html?slug=the-vandoliers">Vandoliers</a></li>
+            <li class="program-day__item"><a class="program-day__link" href="artist.html?slug=yndling">Yndling</a></li>
+          </ul>
+        </section>
+        <section class="program-day program-day--fredag" data-day="fredag" aria-labelledby="program-dag-fredag">
+          <h2 id="program-dag-fredag" class="program-day__title">Fredag 12. juni 2026</h2>
+          <ul class="program-day__list">
+            <li class="program-day__item"><a class="program-day__link" href="artist.html?slug=dagny-1">Dagny</a></li>
+            <li class="program-day__item"><a class="program-day__link" href="artist.html?slug=dermot-kennedy">Dermot Kennedy</a></li>
+            <li class="program-day__item"><a class="program-day__link" href="artist.html?slug=kings-of-convenience-1">Kings of Convenience</a></li>
+            <li class="program-day__item"><a class="program-day__link" href="artist.html?slug=of-monsters-and-men">Of Monsters and Men</a></li>
+            <li class="program-day__item"><a class="program-day__link" href="artist.html?slug=anna-lille-1">Anna Lille</a></li>
+            <li class="program-day__item"><a class="program-day__link" href="artist.html?slug=august-selnes">August Selnes</a></li>
+            <li class="program-day__item"><a class="program-day__link" href="artist.html?slug=elia">ELIA</a></li>
+            <li class="program-day__item"><a class="program-day__link" href="artist.html?slug=genesis-owusu">Genesis Owusu</a></li>
+            <li class="program-day__item"><a class="program-day__link" href="artist.html?slug=hannah-storm-2">Hannah Storm</a></li>
+            <li class="program-day__item"><a class="program-day__link" href="artist.html?slug=joy-crookes">Joy Crookes</a></li>
+            <li class="program-day__item"><a class="program-day__link" href="artist.html?slug=linka-moja">Linka Moja</a></li>
+            <li class="program-day__item"><a class="program-day__link" href="artist.html?slug=linni">Linni</a></li>
+            <li class="program-day__item"><a class="program-day__link" href="artist.html?slug=max-mcnown">Max McNown</a></li>
+            <li class="program-day__item"><a class="program-day__link" href="artist.html?slug=nelly-moar-1">Nelly Moar</a></li>
+            <li class="program-day__item"><a class="program-day__link" href="artist.html?slug=no-4">No. 4</a></li>
+            <li class="program-day__item"><a class="program-day__link" href="artist.html?slug=ora-the-molecule">Ora The Molecule</a></li>
+            <li class="program-day__item"><a class="program-day__link" href="artist.html?slug=sienna-spiro">Sienna Spiro</a></li>
+          </ul>
+        </section>
+        <section class="program-day program-day--lordag" data-day="lordag" aria-labelledby="program-dag-lordag">
+          <h2 id="program-dag-lordag" class="program-day__title">Lørdag 13. juni 2026</h2>
+          <ul class="program-day__list">
+            <li class="program-day__item"><a class="program-day__link" href="artist.html?slug=ka2-1">Ka2</a></li>
+            <li class="program-day__item"><a class="program-day__link" href="artist.html?slug=natasha-bedingfield">Natasha Bedingfield</a></li>
+            <li class="program-day__item"><a class="program-day__link" href="artist.html?slug=sigrid-1">Sigrid</a></li>
+            <li class="program-day__item"><a class="program-day__link" href="artist.html?slug=adama-janlo">Adama Janlo</a></li>
+            <li class="program-day__item"><a class="program-day__link" href="artist.html?slug=amanda-shires">Amanda Shires</a></li>
+            <li class="program-day__item"><a class="program-day__link" href="artist.html?slug=bendik-1">Bendik</a></li>
+            <li class="program-day__item"><a class="program-day__link" href="artist.html?slug=bombino-1">Bombino</a></li>
+            <li class="program-day__item"><a class="program-day__link" href="artist.html?slug=cari-cari">Cari Cari</a></li>
+            <li class="program-day__item"><a class="program-day__link" href="artist.html?slug=david-keenan">David Keenan</a></li>
+            <li class="program-day__item"><a class="program-day__link" href="artist.html?slug=diddi-velle">Diddi Velle</a></li>
+            <li class="program-day__item"><a class="program-day__link" href="artist.html?slug=fjorden-baby-1">Fjorden Baby!</a></li>
+            <li class="program-day__item"><a class="program-day__link" href="artist.html?slug=fred-soila">Fred Soila</a></li>
+            <li class="program-day__item"><a class="program-day__link" href="artist.html?slug=hannah-juanita">Hannah Juanita</a></li>
+            <li class="program-day__item"><a class="program-day__link" href="artist.html?slug=mrcy">MRCY</a></li>
+            <li class="program-day__item"><a class="program-day__link" href="artist.html?slug=oskar-med-k">Oskar med K</a></li>
+            <li class="program-day__item"><a class="program-day__link" href="artist.html?slug=side-brok">Side Brok</a></li>
+            <li class="program-day__item"><a class="program-day__link" href="artist.html?slug=stein-torleif-bjella">Stein Torleif Bjella</a></li>
+            <li class="program-day__item"><a class="program-day__link" href="artist.html?slug=the-mary-wallopers">The Mary Wallopers</a></li>
+            <li class="program-day__item"><a class="program-day__link" href="artist.html?slug=valerie-june">Valerie June</a></li>
+            <li class="program-day__item"><a class="program-day__link" href="artist.html?slug=zupermaria-1">Zupermaria</a></li>
+          </ul>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <p><strong>Bergenfest 2026</strong> – frontend-prototype for universell utforming.</p>
+      <p class="site-footer__meta">10–13. juni · Bergenhus festning · Egne sider for program, billetter og tilgjengelighet</p>
+    </div>
+  </footer>
+
+  <script src="js/common.js"></script>
+  <script src="js/program.js"></script>
+</body>
+</html>

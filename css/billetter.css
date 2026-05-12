@@ -1,0 +1,55 @@
+/* Billettside */
+.notice {
+  position: relative;
+  overflow: hidden;
+  max-width: 40rem;
+  margin: 0 auto;
+  padding: var(--space-xl);
+  text-align: left;
+  background: var(--color-surface);
+  border: 2px solid rgba(56, 31, 83, 0.1);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-card);
+}
+
+.notice::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 0.35rem;
+  background: var(--gradient-cta);
+}
+
+.notice__title {
+  margin: 0 0 var(--space-sm);
+  font-size: 1.3rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-purple-soft);
+}
+
+.notice__text {
+  margin: 0 0 var(--space-lg);
+  color: var(--color-muted);
+}
+
+.notice__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+}
+
+.notice .button--secondary {
+  background: transparent;
+  color: var(--color-purple);
+  border-color: var(--color-purple);
+}
+
+.notice .button--secondary:hover,
+.notice .button--secondary:focus-visible {
+  background: var(--color-teal-light);
+  color: var(--color-purple);
+}

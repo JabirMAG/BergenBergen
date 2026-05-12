@@ -1,0 +1,199 @@
+/* Artistside: detaljvisning i tråd med øvrig prototype */
+.artist-page {
+  padding-top: var(--space-lg);
+}
+
+.artist-back-wrap {
+  margin: 0 0 var(--space-xl);
+}
+
+.artist-back {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
+  font-weight: 700;
+  color: var(--color-purple);
+  text-decoration: none;
+  border-radius: var(--radius);
+  padding: 0.35rem 0.85rem 0.35rem 0;
+}
+
+.artist-back:hover {
+  color: var(--color-teal-deep);
+  text-decoration: underline;
+}
+
+.artist-root {
+  max-width: 52rem;
+}
+
+.artist-status {
+  margin: 0;
+  font-weight: 700;
+  color: var(--color-muted);
+}
+
+.artist-error {
+  padding: var(--space-xl);
+  border-radius: var(--radius);
+  border: 1px solid rgba(43, 20, 66, 0.12);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-card);
+}
+
+.artist-error__title {
+  margin: 0 0 var(--space-sm);
+  font-size: 1.25rem;
+  color: var(--color-purple);
+}
+
+.artist-card {
+  overflow: hidden;
+  border: 1px solid rgba(43, 20, 66, 0.08);
+  border-radius: var(--radius);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-card);
+}
+
+.artist-card::before {
+  content: "";
+  display: block;
+  height: 0.35rem;
+  background: linear-gradient(90deg, var(--color-teal), var(--color-purple), var(--color-accent));
+}
+
+.artist-card__inner {
+  padding: var(--space-xl);
+}
+
+.artist-card__title {
+  margin: 0 0 var(--space-sm);
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--color-purple);
+}
+
+.artist-card__title::after {
+  content: "";
+  display: block;
+  width: 4.5rem;
+  height: 0.3rem;
+  margin-top: var(--space-sm);
+  border-radius: var(--radius);
+  background: var(--gradient-cta);
+}
+
+.artist-card__date {
+  margin: 0 0 var(--space-xl);
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-teal);
+}
+
+.artist-card__figure {
+  margin: 0 0 var(--space-xl);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  border: 1px solid rgba(43, 20, 66, 0.08);
+  background: #f7f4fa;
+}
+
+.artist-card__figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.artist-bio {
+  margin: 0;
+}
+
+.artist-bio p {
+  margin: 0 0 var(--space-md);
+  color: var(--color-muted);
+  font-size: 1.0625rem;
+}
+
+.artist-bio p:last-child {
+  margin-bottom: 0;
+}
+
+.artist-bio p.artist-bio__lead {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.artist-social {
+  margin-top: var(--space-xl);
+  padding-top: var(--space-lg);
+  border-top: 1px solid rgba(43, 20, 66, 0.1);
+}
+
+.artist-social__title {
+  margin: 0 0 var(--space-sm);
+  font-size: 0.875rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-teal);
+}
+
+.artist-social ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+}
+
+.artist-social a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius);
+  border: 2px solid var(--color-border);
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--color-purple);
+}
+
+.artist-social a:hover {
+  border-color: var(--color-teal);
+  background: var(--color-teal-light);
+  color: var(--color-purple-dark);
+}
+
+.artist-source {
+  margin-top: var(--space-xl);
+  padding: var(--space-md) var(--space-lg);
+  border-radius: var(--radius-sm);
+  background: var(--color-teal-light);
+  color: var(--color-teal-deep);
+  font-size: 0.9375rem;
+}
+
+.artist-source a {
+  font-weight: 700;
+  color: var(--color-purple);
+}
+
+@media (min-width: 48rem) {
+  .artist-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
+    gap: var(--space-2xl);
+    align-items: start;
+  }
+
+  .artist-card__figure {
+    margin-bottom: 0;
+  }
+}
