@@ -19,7 +19,7 @@
       </a>
 
       <div class="site-header__tools">
-        <a class="site-cta" href="billetter.html">Kjøp billetter</a>
+        <a class="site-cta" href="billetter.html">Billetter</a>
         <button
           type="button"
           class="menu-toggle"
@@ -41,7 +41,7 @@
           <li><a href="tilgjengelighet.html" class="site-nav__link">Tilgjengelighet</a></li>
           <li>
             <a href="billetter.html" class="site-nav__link site-nav__link--cta">
-              Kjøp billetter
+              Billetter
             </a>
           </li>
         </ul>
@@ -56,8 +56,8 @@
         <p class="page-header__kicker">Lineup 2026</p>
         <h1 id="program-tittel" class="page-header__title">Program</h1>
         <p class="page-header__lead">
-          Oversikt per dag med lenker til hver artist. Bruk søk og dagfilter for å finne artister. Tekst og bilder på
-          artistsidene er hentet fra bergenfest.no.
+          Samlet oversikt med artist, dato, tidspunkt og scene. Bruk søk og dagfilter for å finne riktig konsert.
+          Tidspunktene er eksempeldata for prototypen.
         </p>
       </header>
 
@@ -102,84 +102,844 @@
       <div id="program-innhold" class="program-schedule" aria-describedby="program-tittel program-status">
         <section class="program-day program-day--onsdag" data-day="onsdag" aria-labelledby="program-dag-onsdag">
           <h2 id="program-dag-onsdag" class="program-day__title">Onsdag 10. juni 2026</h2>
-          <ul class="program-day__list">
-            <li class="program-day__item"><a class="program-day__link" href="artist.html?slug=lewis-capaldi-1">Lewis Capaldi</a></li>
-            <li class="program-day__item"><a class="program-day__link" href="artist.html?slug=synne-vo">Synne Vo</a></li>
-            <li class="program-day__item"><a class="program-day__link" href="artist.html?slug=tobias-sten">Tobias Sten</a></li>
-            <li class="program-day__item"><a class="program-day__link" href="artist.html?slug=brooke-combe-1">Brooke Combe</a></li>
-            <li class="program-day__item"><a class="program-day__link" href="artist.html?slug=don-west">DON WEST</a></li>
-            <li class="program-day__item"><a class="program-day__link" href="artist.html?slug=esther">Esther</a></li>
-            <li class="program-day__item"><a class="program-day__link" href="artist.html?slug=lemi">Lemi</a></li>
-            <li class="program-day__item"><a class="program-day__link" href="artist.html?slug=lottery-winners">Lottery Winners</a></li>
-            <li class="program-day__item"><a class="program-day__link" href="artist.html?slug=odhran-murphy">Odhran Murphy</a></li>
-            <li class="program-day__item"><a class="program-day__link" href="artist.html?slug=sarah-julia">Sarah Julia</a></li>
-            <li class="program-day__item"><a class="program-day__link" href="artist.html?slug=the-sophs">The Sophs</a></li>
-          </ul>
+          <div class="program-day__table" role="table" aria-label="Onsdag 10. juni 2026">
+            <div class="program-day__header" role="row">
+              <span class="program-day__header-cell program-day__header-cell--artist" role="columnheader">Artist</span>
+              <span class="program-day__header-cell program-day__header-cell--time" role="columnheader">Tid</span>
+              <span class="program-day__header-cell program-day__header-cell--stage" role="columnheader">Scene</span>
+            </div>
+            <ul class="program-day__list" role="rowgroup">
+            <li class="program-day__item" data-artist-name="lewis capaldi" role="row">
+              <a class="program-day__link" href="artist.html?slug=lewis-capaldi-1">
+                <span class="program-day__name" role="cell">Lewis Capaldi</span>
+                <span class="program-day__time" role="cell">
+                  <span class="program-day__label">Tid</span>
+                  <time datetime="2026-06-10T22:30">22:30</time>
+                </span>
+                <span class="program-day__stage" role="cell">
+                  <span class="program-day__label">Scene</span>
+                  Plenen
+                </span>
+              </a>
+            </li>
+            <li class="program-day__item" data-artist-name="synne vo" role="row">
+              <a class="program-day__link" href="artist.html?slug=synne-vo">
+                <span class="program-day__name" role="cell">Synne Vo</span>
+                <span class="program-day__time" role="cell">
+                  <span class="program-day__label">Tid</span>
+                  <time datetime="2026-06-10T21:45">21:45</time>
+                </span>
+                <span class="program-day__stage" role="cell">
+                  <span class="program-day__label">Scene</span>
+                  Bastionen
+                </span>
+              </a>
+            </li>
+            <li class="program-day__item" data-artist-name="tobias sten" role="row">
+              <a class="program-day__link" href="artist.html?slug=tobias-sten">
+                <span class="program-day__name" role="cell">Tobias Sten</span>
+                <span class="program-day__time" role="cell">
+                  <span class="program-day__label">Tid</span>
+                  <time datetime="2026-06-10T21:15">21:15</time>
+                </span>
+                <span class="program-day__stage" role="cell">
+                  <span class="program-day__label">Scene</span>
+                  Magic Mirrors
+                </span>
+              </a>
+            </li>
+            <li class="program-day__item" data-artist-name="brooke combe" role="row">
+              <a class="program-day__link" href="artist.html?slug=brooke-combe-1">
+                <span class="program-day__name" role="cell">Brooke Combe</span>
+                <span class="program-day__time" role="cell">
+                  <span class="program-day__label">Tid</span>
+                  <time datetime="2026-06-10T20:30">20:30</time>
+                </span>
+                <span class="program-day__stage" role="cell">
+                  <span class="program-day__label">Scene</span>
+                  Hjertebank-scenen
+                </span>
+              </a>
+            </li>
+            <li class="program-day__item" data-artist-name="don west" role="row">
+              <a class="program-day__link" href="artist.html?slug=don-west">
+                <span class="program-day__name" role="cell">DON WEST</span>
+                <span class="program-day__time" role="cell">
+                  <span class="program-day__label">Tid</span>
+                  <time datetime="2026-06-10T20:00">20:00</time>
+                </span>
+                <span class="program-day__stage" role="cell">
+                  <span class="program-day__label">Scene</span>
+                  Håkonshallen
+                </span>
+              </a>
+            </li>
+            <li class="program-day__item" data-artist-name="esther" role="row">
+              <a class="program-day__link" href="artist.html?slug=esther">
+                <span class="program-day__name" role="cell">Esther</span>
+                <span class="program-day__time" role="cell">
+                  <span class="program-day__label">Tid</span>
+                  <time datetime="2026-06-10T19:15">19:15</time>
+                </span>
+                <span class="program-day__stage" role="cell">
+                  <span class="program-day__label">Scene</span>
+                  Bastionen
+                </span>
+              </a>
+            </li>
+            <li class="program-day__item" data-artist-name="lemi" role="row">
+              <a class="program-day__link" href="artist.html?slug=lemi">
+                <span class="program-day__name" role="cell">Lemi</span>
+                <span class="program-day__time" role="cell">
+                  <span class="program-day__label">Tid</span>
+                  <time datetime="2026-06-10T18:30">18:30</time>
+                </span>
+                <span class="program-day__stage" role="cell">
+                  <span class="program-day__label">Scene</span>
+                  Magic Mirrors
+                </span>
+              </a>
+            </li>
+            <li class="program-day__item" data-artist-name="lottery winners" role="row">
+              <a class="program-day__link" href="artist.html?slug=lottery-winners">
+                <span class="program-day__name" role="cell">Lottery Winners</span>
+                <span class="program-day__time" role="cell">
+                  <span class="program-day__label">Tid</span>
+                  <time datetime="2026-06-10T18:00">18:00</time>
+                </span>
+                <span class="program-day__stage" role="cell">
+                  <span class="program-day__label">Scene</span>
+                  Hjertebank-scenen
+                </span>
+              </a>
+            </li>
+            <li class="program-day__item" data-artist-name="odhran murphy" role="row">
+              <a class="program-day__link" href="artist.html?slug=odhran-murphy">
+                <span class="program-day__name" role="cell">Odhran Murphy</span>
+                <span class="program-day__time" role="cell">
+                  <span class="program-day__label">Tid</span>
+                  <time datetime="2026-06-10T17:15">17:15</time>
+                </span>
+                <span class="program-day__stage" role="cell">
+                  <span class="program-day__label">Scene</span>
+                  Håkonshallen
+                </span>
+              </a>
+            </li>
+            <li class="program-day__item" data-artist-name="sarah julia" role="row">
+              <a class="program-day__link" href="artist.html?slug=sarah-julia">
+                <span class="program-day__name" role="cell">Sarah Julia</span>
+                <span class="program-day__time" role="cell">
+                  <span class="program-day__label">Tid</span>
+                  <time datetime="2026-06-10T16:45">16:45</time>
+                </span>
+                <span class="program-day__stage" role="cell">
+                  <span class="program-day__label">Scene</span>
+                  Bastionen
+                </span>
+              </a>
+            </li>
+            <li class="program-day__item" data-artist-name="the sophs" role="row">
+              <a class="program-day__link" href="artist.html?slug=the-sophs">
+                <span class="program-day__name" role="cell">The Sophs</span>
+                <span class="program-day__time" role="cell">
+                  <span class="program-day__label">Tid</span>
+                  <time datetime="2026-06-10T16:00">16:00</time>
+                </span>
+                <span class="program-day__stage" role="cell">
+                  <span class="program-day__label">Scene</span>
+                  Magic Mirrors
+                </span>
+              </a>
+            </li>
+            </ul>
+          </div>
         </section>
         <section class="program-day program-day--torsdag" data-day="torsdag" aria-labelledby="program-dag-torsdag">
           <h2 id="program-dag-torsdag" class="program-day__title">Torsdag 11. juni 2026</h2>
-          <ul class="program-day__list">
-            <li class="program-day__item"><a class="program-day__link" href="artist.html?slug=the-hives">The Hives</a></li>
-            <li class="program-day__item"><a class="program-day__link" href="artist.html?slug=the-kooks">The Kooks</a></li>
-            <li class="program-day__item"><a class="program-day__link" href="artist.html?slug=veronica-maggio-1">Veronica Maggio</a></li>
-            <li class="program-day__item"><a class="program-day__link" href="artist.html?slug=alt-blk-era">ALT BLK ERA</a></li>
-            <li class="program-day__item"><a class="program-day__link" href="artist.html?slug=bob-vylan">Bob Vylan</a></li>
-            <li class="program-day__item"><a class="program-day__link" href="artist.html?slug=kristi-brud-1">Kristi Brud</a></li>
-            <li class="program-day__item"><a class="program-day__link" href="artist.html?slug=nektar">Nektar</a></li>
-            <li class="program-day__item"><a class="program-day__link" href="artist.html?slug=nora-brown-with-stephanie-coleman">Nora Brown with Stephanie Coleman</a></li>
-            <li class="program-day__item"><a class="program-day__link" href="artist.html?slug=nothing-but-thieves-1">Nothing But Thieves</a></li>
-            <li class="program-day__item"><a class="program-day__link" href="artist.html?slug=the-reytons-1">The Reytons</a></li>
-            <li class="program-day__item"><a class="program-day__link" href="artist.html?slug=tropical-fuck-storm">Tropical Fuck Storm</a></li>
-            <li class="program-day__item"><a class="program-day__link" href="artist.html?slug=the-vandoliers">Vandoliers</a></li>
-            <li class="program-day__item"><a class="program-day__link" href="artist.html?slug=yndling">Yndling</a></li>
-          </ul>
+          <div class="program-day__table" role="table" aria-label="Torsdag 11. juni 2026">
+            <div class="program-day__header" role="row">
+              <span class="program-day__header-cell program-day__header-cell--artist" role="columnheader">Artist</span>
+              <span class="program-day__header-cell program-day__header-cell--time" role="columnheader">Tid</span>
+              <span class="program-day__header-cell program-day__header-cell--stage" role="columnheader">Scene</span>
+            </div>
+            <ul class="program-day__list" role="rowgroup">
+            <li class="program-day__item" data-artist-name="the hives" role="row">
+              <a class="program-day__link" href="artist.html?slug=the-hives">
+                <span class="program-day__name" role="cell">The Hives</span>
+                <span class="program-day__time" role="cell">
+                  <span class="program-day__label">Tid</span>
+                  <time datetime="2026-06-11T22:30">22:30</time>
+                </span>
+                <span class="program-day__stage" role="cell">
+                  <span class="program-day__label">Scene</span>
+                  Plenen
+                </span>
+              </a>
+            </li>
+            <li class="program-day__item" data-artist-name="the kooks" role="row">
+              <a class="program-day__link" href="artist.html?slug=the-kooks">
+                <span class="program-day__name" role="cell">The Kooks</span>
+                <span class="program-day__time" role="cell">
+                  <span class="program-day__label">Tid</span>
+                  <time datetime="2026-06-11T22:00">22:00</time>
+                </span>
+                <span class="program-day__stage" role="cell">
+                  <span class="program-day__label">Scene</span>
+                  Bastionen
+                </span>
+              </a>
+            </li>
+            <li class="program-day__item" data-artist-name="veronica maggio" role="row">
+              <a class="program-day__link" href="artist.html?slug=veronica-maggio-1">
+                <span class="program-day__name" role="cell">Veronica Maggio</span>
+                <span class="program-day__time" role="cell">
+                  <span class="program-day__label">Tid</span>
+                  <time datetime="2026-06-11T21:30">21:30</time>
+                </span>
+                <span class="program-day__stage" role="cell">
+                  <span class="program-day__label">Scene</span>
+                  Magic Mirrors
+                </span>
+              </a>
+            </li>
+            <li class="program-day__item" data-artist-name="alt blk era" role="row">
+              <a class="program-day__link" href="artist.html?slug=alt-blk-era">
+                <span class="program-day__name" role="cell">ALT BLK ERA</span>
+                <span class="program-day__time" role="cell">
+                  <span class="program-day__label">Tid</span>
+                  <time datetime="2026-06-11T20:45">20:45</time>
+                </span>
+                <span class="program-day__stage" role="cell">
+                  <span class="program-day__label">Scene</span>
+                  Hjertebank-scenen
+                </span>
+              </a>
+            </li>
+            <li class="program-day__item" data-artist-name="bob vylan" role="row">
+              <a class="program-day__link" href="artist.html?slug=bob-vylan">
+                <span class="program-day__name" role="cell">Bob Vylan</span>
+                <span class="program-day__time" role="cell">
+                  <span class="program-day__label">Tid</span>
+                  <time datetime="2026-06-11T20:15">20:15</time>
+                </span>
+                <span class="program-day__stage" role="cell">
+                  <span class="program-day__label">Scene</span>
+                  Håkonshallen
+                </span>
+              </a>
+            </li>
+            <li class="program-day__item" data-artist-name="kristi brud" role="row">
+              <a class="program-day__link" href="artist.html?slug=kristi-brud-1">
+                <span class="program-day__name" role="cell">Kristi Brud</span>
+                <span class="program-day__time" role="cell">
+                  <span class="program-day__label">Tid</span>
+                  <time datetime="2026-06-11T19:45">19:45</time>
+                </span>
+                <span class="program-day__stage" role="cell">
+                  <span class="program-day__label">Scene</span>
+                  Bastionen
+                </span>
+              </a>
+            </li>
+            <li class="program-day__item" data-artist-name="nektar" role="row">
+              <a class="program-day__link" href="artist.html?slug=nektar">
+                <span class="program-day__name" role="cell">Nektar</span>
+                <span class="program-day__time" role="cell">
+                  <span class="program-day__label">Tid</span>
+                  <time datetime="2026-06-11T19:15">19:15</time>
+                </span>
+                <span class="program-day__stage" role="cell">
+                  <span class="program-day__label">Scene</span>
+                  Magic Mirrors
+                </span>
+              </a>
+            </li>
+            <li class="program-day__item" data-artist-name="nora brown with stephanie coleman" role="row">
+              <a class="program-day__link" href="artist.html?slug=nora-brown-with-stephanie-coleman">
+                <span class="program-day__name" role="cell">Nora Brown with Stephanie Coleman</span>
+                <span class="program-day__time" role="cell">
+                  <span class="program-day__label">Tid</span>
+                  <time datetime="2026-06-11T18:45">18:45</time>
+                </span>
+                <span class="program-day__stage" role="cell">
+                  <span class="program-day__label">Scene</span>
+                  Hjertebank-scenen
+                </span>
+              </a>
+            </li>
+            <li class="program-day__item" data-artist-name="nothing but thieves" role="row">
+              <a class="program-day__link" href="artist.html?slug=nothing-but-thieves-1">
+                <span class="program-day__name" role="cell">Nothing But Thieves</span>
+                <span class="program-day__time" role="cell">
+                  <span class="program-day__label">Tid</span>
+                  <time datetime="2026-06-11T18:15">18:15</time>
+                </span>
+                <span class="program-day__stage" role="cell">
+                  <span class="program-day__label">Scene</span>
+                  Håkonshallen
+                </span>
+              </a>
+            </li>
+            <li class="program-day__item" data-artist-name="the reytons" role="row">
+              <a class="program-day__link" href="artist.html?slug=the-reytons-1">
+                <span class="program-day__name" role="cell">The Reytons</span>
+                <span class="program-day__time" role="cell">
+                  <span class="program-day__label">Tid</span>
+                  <time datetime="2026-06-11T17:30">17:30</time>
+                </span>
+                <span class="program-day__stage" role="cell">
+                  <span class="program-day__label">Scene</span>
+                  Bastionen
+                </span>
+              </a>
+            </li>
+            <li class="program-day__item" data-artist-name="tropical fuck storm" role="row">
+              <a class="program-day__link" href="artist.html?slug=tropical-fuck-storm">
+                <span class="program-day__name" role="cell">Tropical Fuck Storm</span>
+                <span class="program-day__time" role="cell">
+                  <span class="program-day__label">Tid</span>
+                  <time datetime="2026-06-11T17:00">17:00</time>
+                </span>
+                <span class="program-day__stage" role="cell">
+                  <span class="program-day__label">Scene</span>
+                  Magic Mirrors
+                </span>
+              </a>
+            </li>
+            <li class="program-day__item" data-artist-name="vandoliers" role="row">
+              <a class="program-day__link" href="artist.html?slug=the-vandoliers">
+                <span class="program-day__name" role="cell">Vandoliers</span>
+                <span class="program-day__time" role="cell">
+                  <span class="program-day__label">Tid</span>
+                  <time datetime="2026-06-11T16:30">16:30</time>
+                </span>
+                <span class="program-day__stage" role="cell">
+                  <span class="program-day__label">Scene</span>
+                  Hjertebank-scenen
+                </span>
+              </a>
+            </li>
+            <li class="program-day__item" data-artist-name="yndling" role="row">
+              <a class="program-day__link" href="artist.html?slug=yndling">
+                <span class="program-day__name" role="cell">Yndling</span>
+                <span class="program-day__time" role="cell">
+                  <span class="program-day__label">Tid</span>
+                  <time datetime="2026-06-11T16:00">16:00</time>
+                </span>
+                <span class="program-day__stage" role="cell">
+                  <span class="program-day__label">Scene</span>
+                  Håkonshallen
+                </span>
+              </a>
+            </li>
+            </ul>
+          </div>
         </section>
         <section class="program-day program-day--fredag" data-day="fredag" aria-labelledby="program-dag-fredag">
           <h2 id="program-dag-fredag" class="program-day__title">Fredag 12. juni 2026</h2>
-          <ul class="program-day__list">
-            <li class="program-day__item"><a class="program-day__link" href="artist.html?slug=dagny-1">Dagny</a></li>
-            <li class="program-day__item"><a class="program-day__link" href="artist.html?slug=dermot-kennedy">Dermot Kennedy</a></li>
-            <li class="program-day__item"><a class="program-day__link" href="artist.html?slug=kings-of-convenience-1">Kings of Convenience</a></li>
-            <li class="program-day__item"><a class="program-day__link" href="artist.html?slug=of-monsters-and-men">Of Monsters and Men</a></li>
-            <li class="program-day__item"><a class="program-day__link" href="artist.html?slug=anna-lille-1">Anna Lille</a></li>
-            <li class="program-day__item"><a class="program-day__link" href="artist.html?slug=august-selnes">August Selnes</a></li>
-            <li class="program-day__item"><a class="program-day__link" href="artist.html?slug=elia">ELIA</a></li>
-            <li class="program-day__item"><a class="program-day__link" href="artist.html?slug=genesis-owusu">Genesis Owusu</a></li>
-            <li class="program-day__item"><a class="program-day__link" href="artist.html?slug=hannah-storm-2">Hannah Storm</a></li>
-            <li class="program-day__item"><a class="program-day__link" href="artist.html?slug=joy-crookes">Joy Crookes</a></li>
-            <li class="program-day__item"><a class="program-day__link" href="artist.html?slug=linka-moja">Linka Moja</a></li>
-            <li class="program-day__item"><a class="program-day__link" href="artist.html?slug=linni">Linni</a></li>
-            <li class="program-day__item"><a class="program-day__link" href="artist.html?slug=max-mcnown">Max McNown</a></li>
-            <li class="program-day__item"><a class="program-day__link" href="artist.html?slug=nelly-moar-1">Nelly Moar</a></li>
-            <li class="program-day__item"><a class="program-day__link" href="artist.html?slug=no-4">No. 4</a></li>
-            <li class="program-day__item"><a class="program-day__link" href="artist.html?slug=ora-the-molecule">Ora The Molecule</a></li>
-            <li class="program-day__item"><a class="program-day__link" href="artist.html?slug=sienna-spiro">Sienna Spiro</a></li>
-          </ul>
+          <div class="program-day__table" role="table" aria-label="Fredag 12. juni 2026">
+            <div class="program-day__header" role="row">
+              <span class="program-day__header-cell program-day__header-cell--artist" role="columnheader">Artist</span>
+              <span class="program-day__header-cell program-day__header-cell--time" role="columnheader">Tid</span>
+              <span class="program-day__header-cell program-day__header-cell--stage" role="columnheader">Scene</span>
+            </div>
+            <ul class="program-day__list" role="rowgroup">
+            <li class="program-day__item" data-artist-name="dagny" role="row">
+              <a class="program-day__link" href="artist.html?slug=dagny-1">
+                <span class="program-day__name" role="cell">Dagny</span>
+                <span class="program-day__time" role="cell">
+                  <span class="program-day__label">Tid</span>
+                  <time datetime="2026-06-12T22:30">22:30</time>
+                </span>
+                <span class="program-day__stage" role="cell">
+                  <span class="program-day__label">Scene</span>
+                  Plenen
+                </span>
+              </a>
+            </li>
+            <li class="program-day__item" data-artist-name="dermot kennedy" role="row">
+              <a class="program-day__link" href="artist.html?slug=dermot-kennedy">
+                <span class="program-day__name" role="cell">Dermot Kennedy</span>
+                <span class="program-day__time" role="cell">
+                  <span class="program-day__label">Tid</span>
+                  <time datetime="2026-06-12T22:00">22:00</time>
+                </span>
+                <span class="program-day__stage" role="cell">
+                  <span class="program-day__label">Scene</span>
+                  Bastionen
+                </span>
+              </a>
+            </li>
+            <li class="program-day__item" data-artist-name="kings of convenience" role="row">
+              <a class="program-day__link" href="artist.html?slug=kings-of-convenience-1">
+                <span class="program-day__name" role="cell">Kings of Convenience</span>
+                <span class="program-day__time" role="cell">
+                  <span class="program-day__label">Tid</span>
+                  <time datetime="2026-06-12T21:45">21:45</time>
+                </span>
+                <span class="program-day__stage" role="cell">
+                  <span class="program-day__label">Scene</span>
+                  Magic Mirrors
+                </span>
+              </a>
+            </li>
+            <li class="program-day__item" data-artist-name="of monsters and men" role="row">
+              <a class="program-day__link" href="artist.html?slug=of-monsters-and-men">
+                <span class="program-day__name" role="cell">Of Monsters and Men</span>
+                <span class="program-day__time" role="cell">
+                  <span class="program-day__label">Tid</span>
+                  <time datetime="2026-06-12T21:15">21:15</time>
+                </span>
+                <span class="program-day__stage" role="cell">
+                  <span class="program-day__label">Scene</span>
+                  Hjertebank-scenen
+                </span>
+              </a>
+            </li>
+            <li class="program-day__item" data-artist-name="anna lille" role="row">
+              <a class="program-day__link" href="artist.html?slug=anna-lille-1">
+                <span class="program-day__name" role="cell">Anna Lille</span>
+                <span class="program-day__time" role="cell">
+                  <span class="program-day__label">Tid</span>
+                  <time datetime="2026-06-12T20:45">20:45</time>
+                </span>
+                <span class="program-day__stage" role="cell">
+                  <span class="program-day__label">Scene</span>
+                  Håkonshallen
+                </span>
+              </a>
+            </li>
+            <li class="program-day__item" data-artist-name="august selnes" role="row">
+              <a class="program-day__link" href="artist.html?slug=august-selnes">
+                <span class="program-day__name" role="cell">August Selnes</span>
+                <span class="program-day__time" role="cell">
+                  <span class="program-day__label">Tid</span>
+                  <time datetime="2026-06-12T20:30">20:30</time>
+                </span>
+                <span class="program-day__stage" role="cell">
+                  <span class="program-day__label">Scene</span>
+                  Bastionen
+                </span>
+              </a>
+            </li>
+            <li class="program-day__item" data-artist-name="elia" role="row">
+              <a class="program-day__link" href="artist.html?slug=elia">
+                <span class="program-day__name" role="cell">ELIA</span>
+                <span class="program-day__time" role="cell">
+                  <span class="program-day__label">Tid</span>
+                  <time datetime="2026-06-12T20:00">20:00</time>
+                </span>
+                <span class="program-day__stage" role="cell">
+                  <span class="program-day__label">Scene</span>
+                  Magic Mirrors
+                </span>
+              </a>
+            </li>
+            <li class="program-day__item" data-artist-name="genesis owusu" role="row">
+              <a class="program-day__link" href="artist.html?slug=genesis-owusu">
+                <span class="program-day__name" role="cell">Genesis Owusu</span>
+                <span class="program-day__time" role="cell">
+                  <span class="program-day__label">Tid</span>
+                  <time datetime="2026-06-12T19:45">19:45</time>
+                </span>
+                <span class="program-day__stage" role="cell">
+                  <span class="program-day__label">Scene</span>
+                  Hjertebank-scenen
+                </span>
+              </a>
+            </li>
+            <li class="program-day__item" data-artist-name="hannah storm" role="row">
+              <a class="program-day__link" href="artist.html?slug=hannah-storm-2">
+                <span class="program-day__name" role="cell">Hannah Storm</span>
+                <span class="program-day__time" role="cell">
+                  <span class="program-day__label">Tid</span>
+                  <time datetime="2026-06-12T19:15">19:15</time>
+                </span>
+                <span class="program-day__stage" role="cell">
+                  <span class="program-day__label">Scene</span>
+                  Håkonshallen
+                </span>
+              </a>
+            </li>
+            <li class="program-day__item" data-artist-name="joy crookes" role="row">
+              <a class="program-day__link" href="artist.html?slug=joy-crookes">
+                <span class="program-day__name" role="cell">Joy Crookes</span>
+                <span class="program-day__time" role="cell">
+                  <span class="program-day__label">Tid</span>
+                  <time datetime="2026-06-12T18:45">18:45</time>
+                </span>
+                <span class="program-day__stage" role="cell">
+                  <span class="program-day__label">Scene</span>
+                  Bastionen
+                </span>
+              </a>
+            </li>
+            <li class="program-day__item" data-artist-name="linka moja" role="row">
+              <a class="program-day__link" href="artist.html?slug=linka-moja">
+                <span class="program-day__name" role="cell">Linka Moja</span>
+                <span class="program-day__time" role="cell">
+                  <span class="program-day__label">Tid</span>
+                  <time datetime="2026-06-12T18:30">18:30</time>
+                </span>
+                <span class="program-day__stage" role="cell">
+                  <span class="program-day__label">Scene</span>
+                  Magic Mirrors
+                </span>
+              </a>
+            </li>
+            <li class="program-day__item" data-artist-name="linni" role="row">
+              <a class="program-day__link" href="artist.html?slug=linni">
+                <span class="program-day__name" role="cell">Linni</span>
+                <span class="program-day__time" role="cell">
+                  <span class="program-day__label">Tid</span>
+                  <time datetime="2026-06-12T18:00">18:00</time>
+                </span>
+                <span class="program-day__stage" role="cell">
+                  <span class="program-day__label">Scene</span>
+                  Hjertebank-scenen
+                </span>
+              </a>
+            </li>
+            <li class="program-day__item" data-artist-name="max mcnown" role="row">
+              <a class="program-day__link" href="artist.html?slug=max-mcnown">
+                <span class="program-day__name" role="cell">Max McNown</span>
+                <span class="program-day__time" role="cell">
+                  <span class="program-day__label">Tid</span>
+                  <time datetime="2026-06-12T17:30">17:30</time>
+                </span>
+                <span class="program-day__stage" role="cell">
+                  <span class="program-day__label">Scene</span>
+                  Håkonshallen
+                </span>
+              </a>
+            </li>
+            <li class="program-day__item" data-artist-name="nelly moar" role="row">
+              <a class="program-day__link" href="artist.html?slug=nelly-moar-1">
+                <span class="program-day__name" role="cell">Nelly Moar</span>
+                <span class="program-day__time" role="cell">
+                  <span class="program-day__label">Tid</span>
+                  <time datetime="2026-06-12T17:15">17:15</time>
+                </span>
+                <span class="program-day__stage" role="cell">
+                  <span class="program-day__label">Scene</span>
+                  Bastionen
+                </span>
+              </a>
+            </li>
+            <li class="program-day__item" data-artist-name="no. 4" role="row">
+              <a class="program-day__link" href="artist.html?slug=no-4">
+                <span class="program-day__name" role="cell">No. 4</span>
+                <span class="program-day__time" role="cell">
+                  <span class="program-day__label">Tid</span>
+                  <time datetime="2026-06-12T16:45">16:45</time>
+                </span>
+                <span class="program-day__stage" role="cell">
+                  <span class="program-day__label">Scene</span>
+                  Magic Mirrors
+                </span>
+              </a>
+            </li>
+            <li class="program-day__item" data-artist-name="ora the molecule" role="row">
+              <a class="program-day__link" href="artist.html?slug=ora-the-molecule">
+                <span class="program-day__name" role="cell">Ora The Molecule</span>
+                <span class="program-day__time" role="cell">
+                  <span class="program-day__label">Tid</span>
+                  <time datetime="2026-06-12T16:30">16:30</time>
+                </span>
+                <span class="program-day__stage" role="cell">
+                  <span class="program-day__label">Scene</span>
+                  Hjertebank-scenen
+                </span>
+              </a>
+            </li>
+            <li class="program-day__item" data-artist-name="sienna spiro" role="row">
+              <a class="program-day__link" href="artist.html?slug=sienna-spiro">
+                <span class="program-day__name" role="cell">Sienna Spiro</span>
+                <span class="program-day__time" role="cell">
+                  <span class="program-day__label">Tid</span>
+                  <time datetime="2026-06-12T16:00">16:00</time>
+                </span>
+                <span class="program-day__stage" role="cell">
+                  <span class="program-day__label">Scene</span>
+                  Håkonshallen
+                </span>
+              </a>
+            </li>
+            </ul>
+          </div>
         </section>
         <section class="program-day program-day--lordag" data-day="lordag" aria-labelledby="program-dag-lordag">
           <h2 id="program-dag-lordag" class="program-day__title">Lørdag 13. juni 2026</h2>
-          <ul class="program-day__list">
-            <li class="program-day__item"><a class="program-day__link" href="artist.html?slug=ka2-1">Ka2</a></li>
-            <li class="program-day__item"><a class="program-day__link" href="artist.html?slug=natasha-bedingfield">Natasha Bedingfield</a></li>
-            <li class="program-day__item"><a class="program-day__link" href="artist.html?slug=sigrid-1">Sigrid</a></li>
-            <li class="program-day__item"><a class="program-day__link" href="artist.html?slug=adama-janlo">Adama Janlo</a></li>
-            <li class="program-day__item"><a class="program-day__link" href="artist.html?slug=amanda-shires">Amanda Shires</a></li>
-            <li class="program-day__item"><a class="program-day__link" href="artist.html?slug=bendik-1">Bendik</a></li>
-            <li class="program-day__item"><a class="program-day__link" href="artist.html?slug=bombino-1">Bombino</a></li>
-            <li class="program-day__item"><a class="program-day__link" href="artist.html?slug=cari-cari">Cari Cari</a></li>
-            <li class="program-day__item"><a class="program-day__link" href="artist.html?slug=david-keenan">David Keenan</a></li>
-            <li class="program-day__item"><a class="program-day__link" href="artist.html?slug=diddi-velle">Diddi Velle</a></li>
-            <li class="program-day__item"><a class="program-day__link" href="artist.html?slug=fjorden-baby-1">Fjorden Baby!</a></li>
-            <li class="program-day__item"><a class="program-day__link" href="artist.html?slug=fred-soila">Fred Soila</a></li>
-            <li class="program-day__item"><a class="program-day__link" href="artist.html?slug=hannah-juanita">Hannah Juanita</a></li>
-            <li class="program-day__item"><a class="program-day__link" href="artist.html?slug=mrcy">MRCY</a></li>
-            <li class="program-day__item"><a class="program-day__link" href="artist.html?slug=oskar-med-k">Oskar med K</a></li>
-            <li class="program-day__item"><a class="program-day__link" href="artist.html?slug=side-brok">Side Brok</a></li>
-            <li class="program-day__item"><a class="program-day__link" href="artist.html?slug=stein-torleif-bjella">Stein Torleif Bjella</a></li>
-            <li class="program-day__item"><a class="program-day__link" href="artist.html?slug=the-mary-wallopers">The Mary Wallopers</a></li>
-            <li class="program-day__item"><a class="program-day__link" href="artist.html?slug=valerie-june">Valerie June</a></li>
-            <li class="program-day__item"><a class="program-day__link" href="artist.html?slug=zupermaria-1">Zupermaria</a></li>
-          </ul>
+          <div class="program-day__table" role="table" aria-label="Lørdag 13. juni 2026">
+            <div class="program-day__header" role="row">
+              <span class="program-day__header-cell program-day__header-cell--artist" role="columnheader">Artist</span>
+              <span class="program-day__header-cell program-day__header-cell--time" role="columnheader">Tid</span>
+              <span class="program-day__header-cell program-day__header-cell--stage" role="columnheader">Scene</span>
+            </div>
+            <ul class="program-day__list" role="rowgroup">
+            <li class="program-day__item" data-artist-name="ka2" role="row">
+              <a class="program-day__link" href="artist.html?slug=ka2-1">
+                <span class="program-day__name" role="cell">Ka2</span>
+                <span class="program-day__time" role="cell">
+                  <span class="program-day__label">Tid</span>
+                  <time datetime="2026-06-13T22:30">22:30</time>
+                </span>
+                <span class="program-day__stage" role="cell">
+                  <span class="program-day__label">Scene</span>
+                  Plenen
+                </span>
+              </a>
+            </li>
+            <li class="program-day__item" data-artist-name="natasha bedingfield" role="row">
+              <a class="program-day__link" href="artist.html?slug=natasha-bedingfield">
+                <span class="program-day__name" role="cell">Natasha Bedingfield</span>
+                <span class="program-day__time" role="cell">
+                  <span class="program-day__label">Tid</span>
+                  <time datetime="2026-06-13T22:15">22:15</time>
+                </span>
+                <span class="program-day__stage" role="cell">
+                  <span class="program-day__label">Scene</span>
+                  Bastionen
+                </span>
+              </a>
+            </li>
+            <li class="program-day__item" data-artist-name="sigrid" role="row">
+              <a class="program-day__link" href="artist.html?slug=sigrid-1">
+                <span class="program-day__name" role="cell">Sigrid</span>
+                <span class="program-day__time" role="cell">
+                  <span class="program-day__label">Tid</span>
+                  <time datetime="2026-06-13T21:45">21:45</time>
+                </span>
+                <span class="program-day__stage" role="cell">
+                  <span class="program-day__label">Scene</span>
+                  Magic Mirrors
+                </span>
+              </a>
+            </li>
+            <li class="program-day__item" data-artist-name="adama janlo" role="row">
+              <a class="program-day__link" href="artist.html?slug=adama-janlo">
+                <span class="program-day__name" role="cell">Adama Janlo</span>
+                <span class="program-day__time" role="cell">
+                  <span class="program-day__label">Tid</span>
+                  <time datetime="2026-06-13T21:30">21:30</time>
+                </span>
+                <span class="program-day__stage" role="cell">
+                  <span class="program-day__label">Scene</span>
+                  Hjertebank-scenen
+                </span>
+              </a>
+            </li>
+            <li class="program-day__item" data-artist-name="amanda shires" role="row">
+              <a class="program-day__link" href="artist.html?slug=amanda-shires">
+                <span class="program-day__name" role="cell">Amanda Shires</span>
+                <span class="program-day__time" role="cell">
+                  <span class="program-day__label">Tid</span>
+                  <time datetime="2026-06-13T21:15">21:15</time>
+                </span>
+                <span class="program-day__stage" role="cell">
+                  <span class="program-day__label">Scene</span>
+                  Håkonshallen
+                </span>
+              </a>
+            </li>
+            <li class="program-day__item" data-artist-name="bendik" role="row">
+              <a class="program-day__link" href="artist.html?slug=bendik-1">
+                <span class="program-day__name" role="cell">Bendik</span>
+                <span class="program-day__time" role="cell">
+                  <span class="program-day__label">Tid</span>
+                  <time datetime="2026-06-13T20:45">20:45</time>
+                </span>
+                <span class="program-day__stage" role="cell">
+                  <span class="program-day__label">Scene</span>
+                  Bastionen
+                </span>
+              </a>
+            </li>
+            <li class="program-day__item" data-artist-name="bombino" role="row">
+              <a class="program-day__link" href="artist.html?slug=bombino-1">
+                <span class="program-day__name" role="cell">Bombino</span>
+                <span class="program-day__time" role="cell">
+                  <span class="program-day__label">Tid</span>
+                  <time datetime="2026-06-13T20:30">20:30</time>
+                </span>
+                <span class="program-day__stage" role="cell">
+                  <span class="program-day__label">Scene</span>
+                  Magic Mirrors
+                </span>
+              </a>
+            </li>
+            <li class="program-day__item" data-artist-name="cari cari" role="row">
+              <a class="program-day__link" href="artist.html?slug=cari-cari">
+                <span class="program-day__name" role="cell">Cari Cari</span>
+                <span class="program-day__time" role="cell">
+                  <span class="program-day__label">Tid</span>
+                  <time datetime="2026-06-13T20:00">20:00</time>
+                </span>
+                <span class="program-day__stage" role="cell">
+                  <span class="program-day__label">Scene</span>
+                  Hjertebank-scenen
+                </span>
+              </a>
+            </li>
+            <li class="program-day__item" data-artist-name="david keenan" role="row">
+              <a class="program-day__link" href="artist.html?slug=david-keenan">
+                <span class="program-day__name" role="cell">David Keenan</span>
+                <span class="program-day__time" role="cell">
+                  <span class="program-day__label">Tid</span>
+                  <time datetime="2026-06-13T19:45">19:45</time>
+                </span>
+                <span class="program-day__stage" role="cell">
+                  <span class="program-day__label">Scene</span>
+                  Håkonshallen
+                </span>
+              </a>
+            </li>
+            <li class="program-day__item" data-artist-name="diddi velle" role="row">
+              <a class="program-day__link" href="artist.html?slug=diddi-velle">
+                <span class="program-day__name" role="cell">Diddi Velle</span>
+                <span class="program-day__time" role="cell">
+                  <span class="program-day__label">Tid</span>
+                  <time datetime="2026-06-13T19:30">19:30</time>
+                </span>
+                <span class="program-day__stage" role="cell">
+                  <span class="program-day__label">Scene</span>
+                  Bastionen
+                </span>
+              </a>
+            </li>
+            <li class="program-day__item" data-artist-name="fjorden baby!" role="row">
+              <a class="program-day__link" href="artist.html?slug=fjorden-baby-1">
+                <span class="program-day__name" role="cell">Fjorden Baby!</span>
+                <span class="program-day__time" role="cell">
+                  <span class="program-day__label">Tid</span>
+                  <time datetime="2026-06-13T19:00">19:00</time>
+                </span>
+                <span class="program-day__stage" role="cell">
+                  <span class="program-day__label">Scene</span>
+                  Magic Mirrors
+                </span>
+              </a>
+            </li>
+            <li class="program-day__item" data-artist-name="fred soila" role="row">
+              <a class="program-day__link" href="artist.html?slug=fred-soila">
+                <span class="program-day__name" role="cell">Fred Soila</span>
+                <span class="program-day__time" role="cell">
+                  <span class="program-day__label">Tid</span>
+                  <time datetime="2026-06-13T18:45">18:45</time>
+                </span>
+                <span class="program-day__stage" role="cell">
+                  <span class="program-day__label">Scene</span>
+                  Hjertebank-scenen
+                </span>
+              </a>
+            </li>
+            <li class="program-day__item" data-artist-name="hannah juanita" role="row">
+              <a class="program-day__link" href="artist.html?slug=hannah-juanita">
+                <span class="program-day__name" role="cell">Hannah Juanita</span>
+                <span class="program-day__time" role="cell">
+                  <span class="program-day__label">Tid</span>
+                  <time datetime="2026-06-13T18:30">18:30</time>
+                </span>
+                <span class="program-day__stage" role="cell">
+                  <span class="program-day__label">Scene</span>
+                  Håkonshallen
+                </span>
+              </a>
+            </li>
+            <li class="program-day__item" data-artist-name="mrcy" role="row">
+              <a class="program-day__link" href="artist.html?slug=mrcy">
+                <span class="program-day__name" role="cell">MRCY</span>
+                <span class="program-day__time" role="cell">
+                  <span class="program-day__label">Tid</span>
+                  <time datetime="2026-06-13T18:00">18:00</time>
+                </span>
+                <span class="program-day__stage" role="cell">
+                  <span class="program-day__label">Scene</span>
+                  Bastionen
+                </span>
+              </a>
+            </li>
+            <li class="program-day__item" data-artist-name="oskar med k" role="row">
+              <a class="program-day__link" href="artist.html?slug=oskar-med-k">
+                <span class="program-day__name" role="cell">Oskar med K</span>
+                <span class="program-day__time" role="cell">
+                  <span class="program-day__label">Tid</span>
+                  <time datetime="2026-06-13T17:45">17:45</time>
+                </span>
+                <span class="program-day__stage" role="cell">
+                  <span class="program-day__label">Scene</span>
+                  Magic Mirrors
+                </span>
+              </a>
+            </li>
+            <li class="program-day__item" data-artist-name="side brok" role="row">
+              <a class="program-day__link" href="artist.html?slug=side-brok">
+                <span class="program-day__name" role="cell">Side Brok</span>
+                <span class="program-day__time" role="cell">
+                  <span class="program-day__label">Tid</span>
+                  <time datetime="2026-06-13T17:15">17:15</time>
+                </span>
+                <span class="program-day__stage" role="cell">
+                  <span class="program-day__label">Scene</span>
+                  Hjertebank-scenen
+                </span>
+              </a>
+            </li>
+            <li class="program-day__item" data-artist-name="stein torleif bjella" role="row">
+              <a class="program-day__link" href="artist.html?slug=stein-torleif-bjella">
+                <span class="program-day__name" role="cell">Stein Torleif Bjella</span>
+                <span class="program-day__time" role="cell">
+                  <span class="program-day__label">Tid</span>
+                  <time datetime="2026-06-13T17:00">17:00</time>
+                </span>
+                <span class="program-day__stage" role="cell">
+                  <span class="program-day__label">Scene</span>
+                  Håkonshallen
+                </span>
+              </a>
+            </li>
+            <li class="program-day__item" data-artist-name="the mary wallopers" role="row">
+              <a class="program-day__link" href="artist.html?slug=the-mary-wallopers">
+                <span class="program-day__name" role="cell">The Mary Wallopers</span>
+                <span class="program-day__time" role="cell">
+                  <span class="program-day__label">Tid</span>
+                  <time datetime="2026-06-13T16:45">16:45</time>
+                </span>
+                <span class="program-day__stage" role="cell">
+                  <span class="program-day__label">Scene</span>
+                  Bastionen
+                </span>
+              </a>
+            </li>
+            <li class="program-day__item" data-artist-name="valerie june" role="row">
+              <a class="program-day__link" href="artist.html?slug=valerie-june">
+                <span class="program-day__name" role="cell">Valerie June</span>
+                <span class="program-day__time" role="cell">
+                  <span class="program-day__label">Tid</span>
+                  <time datetime="2026-06-13T16:15">16:15</time>
+                </span>
+                <span class="program-day__stage" role="cell">
+                  <span class="program-day__label">Scene</span>
+                  Magic Mirrors
+                </span>
+              </a>
+            </li>
+            <li class="program-day__item" data-artist-name="zupermaria" role="row">
+              <a class="program-day__link" href="artist.html?slug=zupermaria-1">
+                <span class="program-day__name" role="cell">Zupermaria</span>
+                <span class="program-day__time" role="cell">
+                  <span class="program-day__label">Tid</span>
+                  <time datetime="2026-06-13T16:00">16:00</time>
+                </span>
+                <span class="program-day__stage" role="cell">
+                  <span class="program-day__label">Scene</span>
+                  Hjertebank-scenen
+                </span>
+              </a>
+            </li>
+            </ul>
+          </div>
         </section>
       </div>
     </div>

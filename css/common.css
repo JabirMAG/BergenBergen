@@ -155,7 +155,7 @@ a:hover {
   background: var(--gradient-cta);
   color: var(--color-purple);
   border: 2px solid transparent;
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-weight: 800;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -205,7 +205,7 @@ a:hover {
 }
 
 .menu-toggle__label {
-  font-size: 0.75rem;
+  font-size: 0.875rem;
   font-weight: 800;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -303,7 +303,7 @@ a:hover {
 .section-heading__kicker,
 .page-header__kicker {
   margin: 0 0 var(--space-sm);
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-weight: 800;
   letter-spacing: 0.12em;
   text-transform: uppercase;

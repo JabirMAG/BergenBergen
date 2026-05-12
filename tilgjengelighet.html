@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="Favicon/BergenFavicon.ico" sizes="any">
-  <meta name="description" content="Bergenfest 2026 – kort om rullestol, billetter, parkering og ledsager.">
+  <meta name="description" content="Bergenfest 2026 – tilgjengelighet: rullestol, HC-parkering, transport, ledsager og tilrettelagte områder.">
   <title>Bergenfest 2026 – Tilgjengelighet</title>
   <link rel="stylesheet" href="css/common.css">
   <link rel="stylesheet" href="css/tilgjengelighet.css">
@@ -19,7 +19,7 @@
       </a>
 
       <div class="site-header__tools">
-        <a class="site-cta" href="billetter.html">Kjøp billetter</a>
+        <a class="site-cta" href="billetter.html">Billetter</a>
         <button
           type="button"
           class="menu-toggle"
@@ -41,7 +41,7 @@
           <li><a href="tilgjengelighet.html" class="site-nav__link" aria-current="page">Tilgjengelighet</a></li>
           <li>
             <a href="billetter.html" class="site-nav__link site-nav__link--cta">
-              Kjøp billetter
+              Billetter
             </a>
           </li>
         </ul>
@@ -51,60 +51,161 @@
 
   <main id="hovedinnhold" class="site-main" tabindex="-1">
     <div class="page-intro page-intro--access" aria-hidden="true"></div>
-    <div class="page-section">
+    <div class="page-section access-page">
       <header class="page-header page-header--centered">
         <p class="page-header__kicker">For alle gjester</p>
         <h1 id="tilgjengelighet-tittel" class="page-header__title">Tilgjengelighet</h1>
+        <p class="page-header__lead">
+          Planlegg besøket ditt på Bergenfest med kort informasjon om tilrettelegging på området, transport og
+          praktisk hjelp underveis.
+        </p>
       </header>
 
-      <ul class="access-grid">
-        <li>
-          <article class="access-card" aria-labelledby="access-rullestol">
+      <nav class="access-jump" aria-labelledby="access-jump-tittel">
+        <h2 id="access-jump-tittel" class="access-jump__title">Hopp til seksjon</h2>
+        <ul class="access-jump__list">
+          <li><a class="access-jump__link" href="#rullestol-og-fasiliteter">Rullestoltilgang og fasiliteter</a></li>
+          <li><a class="access-jump__link" href="#parkering-og-transport">HC-parkering og transport</a></li>
+          <li><a class="access-jump__link" href="#ledsager-og-assistanse">Ledsagerordning og assistanse</a></li>
+          <li><a class="access-jump__link" href="#kontakt-tilgjengelighet">Kontakt for tilgjengelighet</a></li>
+        </ul>
+      </nav>
+
+      <div class="access-sections">
+        <section id="rullestol-og-fasiliteter" class="access-section" aria-labelledby="access-rullestol">
+          <article class="access-card">
             <h2 id="access-rullestol" class="access-card__title">
               <span class="access-card__icon" aria-hidden="true">R</span>
-              Rullestol og området
+              Rullestoltilgang og fasiliteter
             </h2>
-            <ul class="access-card__list">
-              <li>God framkommelighet på grusveier i festivalområdet.</li>
-              <li>Ramper med god sikt: <strong>Plenen</strong> og <strong>Bastionen</strong>.</li>
-              <li><strong>Magic Mirrors</strong> og <strong>Hjertebank</strong> er lett tilgjengelige.</li>
-              <li>Handikaptoaletter på området.</li>
-              <li>På rampene: én ledsager når det er plass. Med ledsagerbevis prioriteres dere. Ingen forhåndsreservasjon.</li>
-              <li>Ved trengsel må ledsager kunne godta alternative løsninger.</li>
-            </ul>
-          </article>
-        </li>
-        <li>
-          <article class="access-card" aria-labelledby="access-praktisk">
-            <h2 id="access-praktisk" class="access-card__title">
-              <span class="access-card__icon" aria-hidden="true">P</span>
-              Billetter og parkering
-            </h2>
-            <ul class="access-card__list">
-              <li>Rullestolbrukere kjøper <strong>ordinær billett</strong> (festivalpass eller dagspass).</li>
-              <li>Ikke mulig å kjøre inn for avsetting. <strong>Ingen parkering</strong> på eller rett ved området.</li>
-            </ul>
-          </article>
-        </li>
-        <li>
-          <article class="access-card access-card--wide" aria-labelledby="access-ledsager">
-            <h2 id="access-ledsager" class="access-card__title">
-              <span class="access-card__icon" aria-hidden="true">+1</span>
-              Ledsagerordning
-            </h2>
-            <ul class="access-card__list">
-              <li>Med gyldig ledsagerbevis: vanlig billett, og <strong>inntil én ledsager per dag</strong>.</li>
-              <li>Registrer ledsager ved <strong>billettvognen på gresset</strong> utenfor hovedinngang før dere går inn.</li>
-              <li>Ledsagerbånd <strong>byttes per dag</strong> (gjelder ikke hele festivalen i ett).</li>
-              <li>Ledsager betaler kun <strong>billett- og serviceavgift</strong>; vis bevis i port sammen med billett.</li>
-            </ul>
-          </article>
-        </li>
-      </ul>
 
-      <p class="access-footnote">
-        Under festivalen: spør ved <strong>infopunkt</strong> eller <strong>inngang</strong> hvis du trenger hjelp.
-      </p>
+            <div class="access-card__group">
+              <h3 class="access-card__subtitle">Adkomst</h3>
+              <ul class="access-card__list">
+                <li>Grusveier binder sammen festivalområdet på Bergenhus festning.</li>
+                <li>Veier er lagt for god framkommelighet med rullestol.</li>
+              </ul>
+            </div>
+
+            <div class="access-card__group">
+              <h3 class="access-card__subtitle">Ramper og scener</h3>
+              <ul class="access-card__list">
+                <li>Plenen og Bastionen har rampe med god sikt.</li>
+                <li>Magic Mirrors og Hjertebank-scenen er lett tilgjengelig.</li>
+              </ul>
+            </div>
+
+            <div class="access-card__group">
+              <h3 class="access-card__subtitle">Toaletter og områder</h3>
+              <ul class="access-card__list">
+                <li>Handikaptoaletter er merket på flere punkter.</li>
+                <li>Grusveier binder sammen scener, mathage og servering.</li>
+              </ul>
+            </div>
+
+            <div class="access-card__group">
+              <h3 class="access-card__subtitle">Billetter</h3>
+              <ul class="access-card__list">
+                <li>Rullestolbrukere kjøper ordinær billett.</li>
+                <li>Det finnes ingen reservasjonsordning for rullestolplasser.</li>
+              </ul>
+            </div>
+          </article>
+        </section>
+
+        <section id="parkering-og-transport" class="access-section" aria-labelledby="access-parkering">
+          <article class="access-card">
+            <h2 id="access-parkering" class="access-card__title">
+              <span class="access-card__icon" aria-hidden="true">P</span>
+              HC-parkering og transport
+            </h2>
+
+            <div class="access-card__group">
+              <h3 class="access-card__subtitle">HC-parkering</h3>
+              <ul class="access-card__list">
+                <li>Det er ingen parkering på eller rett ved festivalområdet.</li>
+                <li>Det er ikke anledning å kjøre inn for avsetting.</li>
+                <li>Finn HC-parkering i sentrum i god tid.</li>
+              </ul>
+            </div>
+
+            <div class="access-card__group">
+              <h3 class="access-card__subtitle">Kollektiv</h3>
+              <ul class="access-card__list">
+                <li>Bybane og buss stopper nær Bergenhus festning.</li>
+                <li>Holdeplasser i sentrum har kort gangavstand.</li>
+              </ul>
+            </div>
+
+            <div class="access-card__group">
+              <h3 class="access-card__subtitle">På festivaldagen</h3>
+              <ul class="access-card__list">
+                <li>Flat adkomst fra holdeplass til hovedinngang.</li>
+                <li>Følg skilting hele veien inn.</li>
+                <li>Regn med ekstra tid på travle dager.</li>
+              </ul>
+            </div>
+          </article>
+        </section>
+
+        <section id="ledsager-og-assistanse" class="access-section" aria-labelledby="access-ledsager">
+          <article class="access-card">
+            <h2 id="access-ledsager" class="access-card__title">
+              <span class="access-card__icon" aria-hidden="true">L</span>
+              Ledsagerordning og assistanse på området
+            </h2>
+
+            <div class="access-card__group">
+              <h3 class="access-card__subtitle">Ledsagerordning</h3>
+              <ul class="access-card__list">
+                <li>Gyldig ledsagerbevis kreves.</li>
+                <li>Inntil én ledsager per billettinnehaver per dag.</li>
+                <li>Registrer ledsager ved billettvognen før innslipp.</li>
+                <li>Ledsager betaler kun billett- og serviceavgift.</li>
+              </ul>
+            </div>
+
+            <div class="access-card__group">
+              <h3 class="access-card__subtitle">Assistanse på området</h3>
+              <ul class="access-card__list">
+                <li>Infopunktet ved inngangen viser vei til rampe og toalett.</li>
+                <li>Det er vanligvis god plass på rampene.</li>
+                <li>Personalet hjelper med veibeskrivelse ved behov.</li>
+              </ul>
+            </div>
+          </article>
+        </section>
+
+        <section id="kontakt-tilgjengelighet" class="access-section" aria-labelledby="access-kontakt">
+          <article class="access-card access-card--contact">
+            <h2 id="access-kontakt" class="access-card__title">
+              <span class="access-card__icon" aria-hidden="true">K</span>
+              Kontakt for tilgjengelighet
+            </h2>
+            <p class="access-card__lead">
+              Ta kontakt hvis du trenger mer informasjon før eller under festivalen.
+            </p>
+            <dl class="access-contact">
+              <div class="access-contact__item">
+                <dt>Infopunkt</dt>
+                <dd>Ved hovedinngangen under hele festivalen.</dd>
+              </div>
+              <div class="access-contact__item">
+                <dt>E-post</dt>
+                <dd><strong>tilgjengelighet@bergenfest.no</strong> (eksempel i prototypen)</dd>
+              </div>
+              <div class="access-contact__item">
+                <dt>Assistanse på stedet</dt>
+                <dd>Veiledning til scene, toalett og sitteplass.</dd>
+              </div>
+            </dl>
+            <div class="access-card__actions">
+              <a class="button button--primary" href="billetter.html">Les om billetter</a>
+              <a class="button button--secondary" href="program.html">Se program</a>
+            </div>
+          </article>
+        </section>
+      </div>
     </div>
   </main>
 

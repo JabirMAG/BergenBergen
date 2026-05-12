@@ -58,7 +58,7 @@
 .day-filters__buttons {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--space-sm);
+  gap: var(--space-md);
 }
 
 .filter-button {
@@ -97,6 +97,10 @@
   background: var(--color-teal-light);
   color: var(--color-teal-deep);
   font-weight: 700;
+}
+
+.program-status:empty {
+  display: none;
 }
 
 .program-schedule {
@@ -151,6 +155,15 @@
   color: var(--color-purple-soft);
 }
 
+.program-day__table {
+  display: grid;
+  gap: var(--space-sm);
+}
+
+.program-day__header {
+  display: none;
+}
+
 .program-day__list {
   list-style: none;
   margin: 0;
@@ -179,18 +192,45 @@
 }
 
 .program-day__link {
-  display: flex;
-  align-items: center;
+  display: grid;
+  gap: var(--space-sm);
   min-height: 2.75rem;
-  padding: 0.75rem 1rem;
-  font-weight: 700;
+  padding: 0.85rem 1rem;
   color: var(--color-text);
   text-decoration: none;
 }
 
+.program-day__name {
+  font-weight: 800;
+  font-size: 1.0625rem;
+  color: var(--color-purple);
+}
+
+.program-day__time,
+.program-day__stage {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.35rem 0.5rem;
+  font-weight: 700;
+  color: var(--color-muted);
+}
+
+.program-day__label {
+  font-size: 0.875rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-teal-deep);
+}
+
 .program-day__item:hover .program-day__link,
 .program-day__item:focus-within .program-day__link {
-  color: var(--color-purple);
+  text-decoration: none;
+}
+
+.program-day__item:hover .program-day__name,
+.program-day__item:focus-within .program-day__name {
   text-decoration: underline;
   text-underline-offset: 0.15em;
 }
@@ -199,9 +239,23 @@
   display: none;
 }
 
-@media (min-width: 36rem) {
-  .program-day__list {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+@media (min-width: 40rem) {
+  .program-day__link {
+    grid-template-columns: minmax(12rem, 1.4fr) minmax(5rem, 0.7fr) minmax(8rem, 1fr);
+    align-items: center;
+    gap: var(--space-md);
+  }
+
+  .program-day__label {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
   }
 }
 
@@ -210,10 +264,20 @@
     grid-template-columns: minmax(16rem, 1fr) auto;
     align-items: end;
   }
-}
 
-@media (min-width: 60rem) {
-  .program-day__list {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+  .program-day__header {
+    display: grid;
+    grid-template-columns: minmax(12rem, 1.4fr) minmax(5rem, 0.7fr) minmax(8rem, 1fr);
+    gap: var(--space-md);
+    padding: 0 1rem 0.35rem;
+    border-bottom: 2px solid rgba(56, 31, 83, 0.12);
+  }
+
+  .program-day__header-cell {
+    font-size: 0.875rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-purple-soft);
   }
 }

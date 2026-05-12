@@ -6,6 +6,17 @@ const programStatus = document.getElementById("program-status");
 const searchInput = document.getElementById("artist-sok");
 const filterButtons = document.querySelectorAll("[data-day-filter]");
 
+function countTotalArtists(root) {
+  return root.querySelectorAll(".program-day__item").length;
+}
+
+function getArtistSearchText(item) {
+  const fromData = item.dataset.artistName;
+  if (fromData) return fromData;
+  const nameEl = item.querySelector(".program-day__name");
+  return nameEl?.textContent?.trim().toLowerCase() ?? "";
+}
+
 function applyProgramFilters() {
   if (!programInnhold || !programStatus || !searchInput || filterButtons.length === 0) {
     return;
@@ -31,8 +42,7 @@ function applyProgramFilters() {
 
     const items = section.querySelectorAll(".program-day__item");
     items.forEach((item) => {
-      const artistEl = item.querySelector(".program-day__link");
-      const name = artistEl?.textContent?.trim().toLowerCase() ?? "";
+      const name = getArtistSearchText(item);
       const searchMatches = !query || name.includes(query);
       item.hidden = !searchMatches;
       if (searchMatches) {
@@ -44,11 +54,14 @@ function applyProgramFilters() {
     section.hidden = !anyVisible;
   });
 
+  const total = countTotalArtists(programInnhold);
+
   if (visibleArtists === 0) {
     programStatus.textContent = "Ingen artister matcher søket eller valgt dag.";
+  } else if (visibleArtists === total && dayKey === "alle" && !query) {
+    programStatus.textContent = "";
   } else {
-    programStatus.textContent =
-      visibleArtists === 1 ? "1 artist." : `${visibleArtists} artister.`;
+    programStatus.textContent = `Viser ${visibleArtists} av ${total} artister.`;
   }
 }
 

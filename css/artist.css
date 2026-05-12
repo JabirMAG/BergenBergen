@@ -3,28 +3,53 @@
   padding-top: var(--space-lg);
 }
 
-.artist-back-wrap {
-  margin: 0 0 var(--space-xl);
+.artist-page-nav {
+  max-width: 52rem;
+  margin: 0 auto var(--space-xl);
 }
 
 .artist-back {
   display: inline-flex;
   align-items: center;
+  gap: var(--space-xs);
   min-height: 2.75rem;
-  font-weight: 700;
-  color: var(--color-purple);
+  padding: 0.75rem 1.25rem;
+  border: 2px solid rgba(56, 31, 83, 0.16);
+  border-radius: var(--radius-soft);
+  background: #ffffff;
+  color: var(--color-purple-dark);
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
   text-decoration: none;
-  border-radius: var(--radius);
-  padding: 0.35rem 0.85rem 0.35rem 0;
+  box-shadow: 0 0.2rem 0.6rem rgba(56, 31, 83, 0.08);
+  transition:
+    background-color var(--transition-fast),
+    border-color var(--transition-fast),
+    color var(--transition-fast),
+    box-shadow var(--transition-fast),
+    transform var(--transition-fast);
 }
 
 .artist-back:hover {
-  color: var(--color-teal-deep);
-  text-decoration: underline;
+  background: var(--color-teal-light);
+  border-color: var(--color-teal-deep);
+  color: var(--color-purple-dark);
+  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-1px);
+}
+
+.artist-back:focus-visible {
+  outline: none;
+  background: #ffffff;
+  border-color: var(--color-focus);
+  color: var(--color-purple-dark);
+  box-shadow: var(--focus-ring);
 }
 
 .artist-root {
   max-width: 52rem;
+  margin-inline: auto;
 }
 
 .artist-status {
@@ -49,7 +74,7 @@
 
 .artist-card {
   overflow: hidden;
-  border: 1px solid rgba(43, 20, 66, 0.08);
+  border: 2px solid rgba(56, 31, 83, 0.08);
   border-radius: var(--radius);
   background: var(--color-surface);
   box-shadow: var(--shadow-card);
@@ -86,6 +111,80 @@
   background: var(--gradient-cta);
 }
 
+.artist-card__teaser {
+  margin: 0;
+  max-width: 38rem;
+  font-size: 1.0625rem;
+  line-height: 1.55;
+  font-weight: 600;
+  color: var(--color-text);
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+
+.artist-card__content {
+  display: grid;
+  gap: var(--space-xl);
+}
+
+.artist-card__section-title {
+  margin: 0 0 var(--space-md);
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-purple-soft);
+}
+
+.artist-card__show {
+  margin: 0;
+  padding: var(--space-lg);
+  border: 2px solid rgba(56, 31, 83, 0.1);
+  border-radius: var(--radius-soft);
+  background: var(--color-bg-soft);
+  box-shadow: var(--shadow-soft);
+}
+
+.artist-card__show-list {
+  display: grid;
+  gap: var(--space-md);
+  margin: 0;
+}
+
+.artist-card__show-item {
+  margin: 0;
+}
+
+.artist-card__show-label {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.artist-card__icon {
+  flex-shrink: 0;
+  color: var(--color-teal-deep);
+}
+
+.artist-card__show-term {
+  margin: 0 0 var(--space-xs);
+  font-size: 0.875rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-teal-deep);
+}
+
+.artist-card__show-value {
+  margin: 0;
+  padding-left: calc(20px + var(--space-sm));
+  font-size: 1.0625rem;
+  font-weight: 800;
+  color: var(--color-purple-dark);
+}
+
 .artist-card__date {
   margin: 0 0 var(--space-xl);
   font-size: 1rem;
@@ -113,9 +212,27 @@
   margin: 0;
 }
 
+.artist-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+  margin-top: var(--space-md);
+  padding-top: var(--space-xl);
+  border-top: 1px solid rgba(43, 20, 66, 0.1);
+}
+
+.artist-actions .button {
+  flex: 1 1 12rem;
+}
+
+.artist-actions .button:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring);
+}
+
 .artist-bio p {
   margin: 0 0 var(--space-md);
-  color: var(--color-muted);
+  color: var(--color-text);
   font-size: 1.0625rem;
 }
 
@@ -129,19 +246,36 @@
   color: var(--color-text);
 }
 
-.artist-social {
-  margin-top: var(--space-xl);
-  padding-top: var(--space-lg);
-  border-top: 1px solid rgba(43, 20, 66, 0.1);
+.artist-bio__more {
+  margin-top: var(--space-md);
 }
 
-.artist-social__title {
-  margin: 0 0 var(--space-sm);
-  font-size: 0.875rem;
+.artist-bio__toggle {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
+  padding: 0.5rem 0;
+  font-size: 1rem;
   font-weight: 800;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
-  color: var(--color-teal);
+  color: var(--color-purple);
+  cursor: pointer;
+}
+
+.artist-bio__toggle:hover,
+.artist-bio__toggle:focus-visible {
+  color: var(--color-teal-deep);
+}
+
+.artist-bio__more[open] .artist-bio__toggle {
+  margin-bottom: var(--space-md);
+}
+
+.artist-social {
+  margin: 0;
+  padding-top: var(--space-lg);
+  border-top: 1px solid rgba(43, 20, 66, 0.1);
 }
 
 .artist-social ul {
@@ -153,7 +287,8 @@
   gap: var(--space-sm);
 }
 
-.artist-social a {
+.artist-social a,
+.artist-social__channel {
   display: inline-flex;
   align-items: center;
   min-height: 2.75rem;
@@ -161,8 +296,17 @@
   border-radius: var(--radius);
   border: 2px solid var(--color-border);
   font-weight: 700;
-  text-decoration: none;
   color: var(--color-purple);
+}
+
+.artist-social__channel {
+  background: var(--color-bg-soft);
+}
+
+.artist-social__note {
+  margin: var(--space-sm) 0 0;
+  color: var(--color-purple-soft);
+  font-size: 0.9375rem;
 }
 
 .artist-social a:hover {
@@ -176,13 +320,19 @@
   padding: var(--space-md) var(--space-lg);
   border-radius: var(--radius-sm);
   background: var(--color-teal-light);
-  color: var(--color-teal-deep);
+  color: var(--color-purple-dark);
   font-size: 0.9375rem;
 }
 
-.artist-source a {
-  font-weight: 700;
-  color: var(--color-purple);
+@media (min-width: 40rem) {
+  .artist-card__show-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--space-lg);
+  }
+
+  .artist-card__show-value {
+    padding-left: 0;
+  }
 }
 
 @media (min-width: 48rem) {
