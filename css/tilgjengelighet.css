@@ -3,109 +3,23 @@
   background: linear-gradient(90deg, var(--color-accent) 0%, var(--color-pink) 50%, var(--color-teal) 100%);
 }
 
-.access-page {
-  position: relative;
-  padding-bottom: var(--space-3xl);
-}
-
-.access-page::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  background:
-    linear-gradient(180deg, rgba(217, 242, 239, 0.35) 0%, rgba(246, 244, 248, 0.9) 18%, rgba(255, 255, 255, 0) 42%),
-    radial-gradient(circle at top right, rgba(240, 90, 137, 0.08), transparent 32%),
-    radial-gradient(circle at top left, rgba(0, 158, 144, 0.1), transparent 28%);
-  pointer-events: none;
-}
-
-.access-jump {
-  margin-bottom: var(--space-2xl);
-  padding: var(--space-xl);
-  border: 2px solid rgba(56, 31, 83, 0.16);
-  border-radius: var(--radius-soft);
-  background: linear-gradient(180deg, #ffffff 0%, #f3eef8 100%);
-  box-shadow: var(--shadow-soft);
-}
-
-.access-jump__title {
-  margin: 0 0 var(--space-md);
-  font-size: 1rem;
-  font-weight: 800;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--color-purple);
-}
-
-.access-jump__list {
+.access-grid {
   list-style: none;
   margin: 0;
   padding: 0;
   display: grid;
-  gap: var(--space-sm);
-}
-
-.access-jump__link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  min-height: 2.75rem;
-  padding: 0.875rem 1.25rem;
-  border: 2px solid var(--color-purple-rich);
-  border-radius: var(--radius-soft);
-  background: #ffffff;
-  color: var(--color-purple-dark);
-  font-size: 1rem;
-  font-weight: 800;
-  letter-spacing: 0.03em;
-  text-decoration: none;
-  cursor: pointer;
-  box-shadow: 0 0.2rem 0.6rem rgba(56, 31, 83, 0.08);
-  transition:
-    background-color var(--transition-fast),
-    border-color var(--transition-fast),
-    color var(--transition-fast),
-    box-shadow var(--transition-fast),
-    transform var(--transition-fast);
-}
-
-.access-jump__link:hover {
-  background: var(--color-teal-light);
-  border-color: var(--color-teal-deep);
-  color: var(--color-purple-dark);
-  box-shadow: var(--shadow-card-hover);
-  transform: translateY(-1px);
-}
-
-.access-jump__link:focus-visible {
-  outline: none;
-  background: #ffffff;
-  border-color: var(--color-teal-deep);
-  color: var(--color-purple-dark);
-  box-shadow: var(--focus-ring);
-}
-
-.access-sections {
-  display: grid;
-  gap: var(--space-xl);
-  max-width: 48rem;
-  margin-inline: auto;
-}
-
-.access-section {
-  scroll-margin-top: calc(var(--header-height) + var(--space-md));
+  gap: var(--space-lg);
 }
 
 .access-card {
   position: relative;
   overflow: hidden;
-  background: #ffffff;
-  border: 2px solid rgba(56, 31, 83, 0.12);
-  border-radius: var(--radius-soft);
+  background: var(--color-surface);
+  border: 2px solid rgba(56, 31, 83, 0.08);
+  border-radius: var(--radius);
   box-shadow: var(--shadow-card);
-  padding: var(--space-xl);
+  padding: var(--space-lg);
+  height: 100%;
 }
 
 .access-card::before {
@@ -122,116 +36,67 @@
   display: flex;
   align-items: center;
   gap: var(--space-sm);
-  margin: 0 0 var(--space-lg);
-  font-size: clamp(1.125rem, 2.5vw, 1.5rem);
+  margin: 0 0 var(--space-md);
+  font-size: 1.25rem;
   font-weight: 800;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  color: var(--color-purple);
+  color: var(--color-purple-soft);
 }
 
 .access-card__icon {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  flex-shrink: 0;
   width: 2.75rem;
   height: 2.75rem;
-  border-radius: var(--radius-soft);
+  border-radius: var(--radius);
   background: var(--color-teal-light);
   color: var(--color-teal-deep);
   font-weight: 800;
 }
 
-.access-card__lead {
-  margin: 0 0 var(--space-lg);
-  color: var(--color-text);
-  font-size: 1rem;
-  font-weight: 700;
+.access-card p {
+  margin: 0 0 var(--space-md);
+  color: var(--color-muted);
 }
 
-.access-card__group + .access-card__group {
-  margin-top: var(--space-lg);
-  padding-top: var(--space-lg);
-  border-top: 1px solid rgba(56, 31, 83, 0.1);
-}
-
-.access-card__subtitle {
-  margin: 0 0 var(--space-sm);
-  font-size: 1rem;
-  font-weight: 800;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  color: var(--color-purple-dark);
+.access-card p:last-child {
+  margin-bottom: 0;
 }
 
 .access-card__list {
   margin: 0;
-  padding-left: 1.25rem;
-  color: var(--color-text);
-  font-size: 1rem;
+  padding-left: 1.15rem;
+  color: var(--color-muted);
+  display: grid;
+  gap: var(--space-sm);
 }
 
-.access-card__list li + li {
-  margin-top: var(--space-xs);
+.access-card__list li {
+  padding-left: 0.15rem;
 }
 
-.access-contact {
-  margin: 0 0 var(--space-lg);
+.access-card__list li::marker {
+  color: var(--color-teal-deep);
 }
 
-.access-contact__item {
-  margin: 0 0 var(--space-md);
-  padding: var(--space-md);
-  border-radius: var(--radius-soft);
-  background: var(--color-bg-soft);
-}
-
-.access-contact__item:last-child {
-  margin-bottom: 0;
-}
-
-.access-contact dt {
-  margin: 0 0 var(--space-xs);
-  font-size: 1rem;
-  font-weight: 800;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--color-purple-dark);
-}
-
-.access-contact dd {
-  margin: 0;
-  color: var(--color-text);
-  font-size: 1rem;
-}
-
-.access-card__actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-md);
-  margin-top: var(--space-lg);
-}
-
-.access-card--contact::before {
-  background: linear-gradient(90deg, var(--color-purple), var(--color-pink), var(--color-accent));
-}
-
-@media (min-width: 40rem) {
-  .access-jump__list {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
+.access-footnote {
+  margin: var(--space-xl) 0 0;
+  padding: var(--space-md) var(--space-lg);
+  border-radius: var(--radius-sm);
+  background: var(--color-teal-light);
+  color: var(--color-teal-deep);
+  font-size: 0.9375rem;
+  max-width: 42rem;
 }
 
 @media (min-width: 48rem) {
-  .access-contact {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: var(--space-md);
+  .access-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .access-contact__item {
-    margin: 0;
-    height: 100%;
+  .access-card--wide {
+    grid-column: 1 / -1;
   }
 }
